@@ -1,6 +1,7 @@
 # 钓否
-
-零构建、纯前端的响应式钓鱼天气建议页。直接打开 `index.html`，或部署至 GitHub Pages / Vercel 静态站点即可。
+通过
+https://yuling-yl.github.io/Fish-or-Not/
+打开网站
 
 ## 数据与降级
 
