@@ -1,7 +1,6 @@
 # 钓否
-通过
-https://yuling-yl.github.io/Fish-or-Not/
-打开网站
+
+零构建、纯前端的响应式钓鱼天气建议页。直接打开 `index.html`，或部署至 GitHub Pages / Vercel 静态站点即可。
 
 ## 数据与降级
 
@@ -20,6 +19,14 @@ https://yuling-yl.github.io/Fish-or-Not/
 
 这些是面向出钓的经验型启发式规则，并非真实上鱼率预测。水温、溶氧、投喂、鱼密度、水深、水色与当地禁渔规则仍应由钓者现场确认。
 
+## 用饵、窗口与交互
+
+- 路亚模式仅展示拟饵（软饵、亮片、米诺、VIB、雷蛙等）；台钓模式仅展示自然饵或商品饵（蚯蚓、红虫、玉米及相应味型商品饵）。
+- “最近钓鱼窗口期”只分析当前起 48 小时内的 3 小时时段：路亚需气压回升至少 0.6 hPa；台钓允许轻微波动的稳定气压。气压下行窗口会被剔除。点击卡片可展开未来 24 小时的气压曲线。
+- 点击鱼种图例会同步更新圆环中心、用饵详情和选中态；再次点击同一鱼种可恢复默认高亮。
+- 字号均采用 `clamp()`，在 ≤768px 时圆环与图例改为上下排列，在 ≤410px 时图例改为单列，避免横向滚动。
+- “钓鱼建议”跟随当前选中的鱼种更新：野钓显示适宜水域、最佳时间、钓鱼技巧；鱼塘钓仅显示时间和技巧，并说明建议聚焦钓场内的投饵区、增氧机与饵料状态。
+
 ## 参考依据
 
 - [Texas Parks & Wildlife：低光照的晨昏时段更利于进食](https://tpwd.texas.gov/education/resources/aquatic-science/tas/chapters/chapter-13/)
@@ -29,3 +36,7 @@ https://yuling-yl.github.io/Fish-or-Not/
 - [农业农村部：罗非鱼主产区覆盖广东、福建、广西、海南和云南](https://yyj.moa.gov.cn/fzgh/201904/t20190419_6208331.htm)
 - [新疆农业农村厅：额尔齐斯河/乌伦古湖有白斑狗鱼等冷水鱼](https://nynct.xinjiang.gov.cn/xjnynct/c113577/202309/1eedf14c7de14c87afd53ac71c5d2e88.shtml)
 - [国家重点保护野生动物名录](https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202311/t20231120_3304775.html)
+- [盐城市农业农村局：按鱼类摄食方式选择饲料类型](https://snw.yancheng.gov.cn/art/2021/10/28/art_899_3750198.html)
+- [怀化市农业农村局：蚯蚓等动物蛋白饲料与谷物、青饲料](https://www.huaihua.gov.cn/nyncj/c108787/201701/18cd9a1d666d4f5ab3452f9b38c26644.shtml)
+- [锡林郭勒盟农牧局：鳜鱼底层、夜间活动与乱石/树桩标点](https://nmj.xlgl.gov.cn/nmj/nmyw/pzzy/2025092616535185563/index.html)
+- [TPWD：鲶鱼贴底、偏好结构及夜钓信息](https://tpwd.texas.gov/publications/pwdpubs/media/pwd_br_k0700_0162_01_03.pdf)
